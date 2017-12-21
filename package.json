@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf ./built; tsc"
+    "build": "rm -rf ./dist; tsc"
   },
   "repository": {
     "type": "git",
