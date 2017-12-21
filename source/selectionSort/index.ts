@@ -17,12 +17,15 @@ export default function selectionSort(array: nums): nums {
   let result = [...array];
 
   while (place < array.length) {
-    const { [place]: placeValue, [nextMinIndex]: nextMinValue } = result;
+    // get the next value and next min value
+    const { [place]: next, [nextMinIndex]: nextMin } = result;
 
-    if (nextMinValue < placeValue) {
-      [result[nextMinIndex], result[place]] = [placeValue, nextMinValue];
+    // swap the values in the result array if the next value is less than the next min value
+    if (next > nextMin) {
+      [result[nextMinIndex], result[place]] = [next, nextMin];
     }
 
+    // find the indexes for the next iteration
     place++;
     nextMinIndex = indexOfMin(result.slice(place)) + place;
   }
