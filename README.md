@@ -7,3 +7,11 @@ I too am a mostly self-taught programmer who sometimes feels imposter symdrome i
 Here is my collection of data structures and algorithms.
 
 Most are written in TypeScript as it's my favourite working language but I may add implementations in other languages too.
+
+## To install
+
+`npm i`
+
+## To test
+
+`npm test`
