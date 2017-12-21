@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+      "outDir": "./dist",
+      "target": "es5",
+      "noImplicitAny": true,
+      "noImplicitThis": true
+  },
+  "include": [
+    "source/**/*"
+  ]
+}

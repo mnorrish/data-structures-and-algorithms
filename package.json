@@ -1,0 +1,32 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "0.0.1",
+  "description": "# Data structures and algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rm -rf ./built; tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnorrish/data-structures-and-algorithms.git"
+  },
+  "author": "matt@mnorrish.co.nz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mnorrish/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/mnorrish/data-structures-and-algorithms#readme",
+  "devDependencies": {
+    "@types/jest": "^21.1.9",
+    "jest": "^22.0.3",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "moduleFileExtensions": ["ts", "js"],
+    "transform": {
+      "^.+\\.ts$": "<rootDir>/jestPreprocessor.js"
+    },
+    "testMatch": ["**/*.spec.ts"]
+  }
+}
