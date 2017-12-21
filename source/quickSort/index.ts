@@ -1,14 +1,18 @@
 type nums = number[];
+type pivotResult = [nums, nums];
 
-export default function quickSort(arr: nums): nums {
-  if (!arr.length) return [];
-  
-  const [pivot, ...values] = arr;
-
-  const { lte, gt } = values.reduce((memo, n) => {
-      memo[n <= pivot ? 'lte' : 'gt'].push(n);
+export function splitOnPivot(pivot: number, array: nums): pivotResult {
+  return array.reduce<pivotResult>((memo, n) => {
+      memo[n <= pivot ? 0 : 1].push(n);
       return memo;
-  }, { lte: [], gt: [] });
+  }, [[], []]);
+}
+
+export default function quickSort(array: nums): nums {
+  if (array.length <= 1) return array;
+  
+  const [pivot, ...values] = array;
+  const [lte, gt] = splitOnPivot(pivot, values);
   
   return [...quickSort(lte), pivot, ...quickSort(gt)];
 }
