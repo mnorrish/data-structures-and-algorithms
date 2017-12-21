@@ -3,7 +3,9 @@
       "outDir": "./dist",
       "target": "es5",
       "noImplicitAny": true,
-      "noImplicitThis": true
+      "noImplicitThis": true,
+      "declaration": true,
+      "strict": true
   },
   "include": [
     "source/**/*"

@@ -1,5 +1,5 @@
-type nums = number[];
-type pivotResult = [nums, nums];
+export type nums = number[];
+export type pivotResult = [nums, nums];
 
 export function splitOnPivot(pivot: number, array: nums): pivotResult {
   return array.reduce<pivotResult>((memo, n) => {

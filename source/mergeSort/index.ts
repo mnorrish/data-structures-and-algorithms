@@ -1,4 +1,4 @@
-type nums = number[];
+export type nums = number[];
 
 export function merge(left: nums, right: nums): nums {
   const result = [];

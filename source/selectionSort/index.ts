@@ -1,4 +1,4 @@
-type nums = number[];
+export type nums = number[];
 
 export function indexOfMin([first, ...rest]: nums): number {
   let min = first;
